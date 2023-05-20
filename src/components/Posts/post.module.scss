@@ -1,0 +1,73 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.post {
+  background-color: $gray-800;
+  border-radius: 8px;
+  padding: 2.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 1.5rem;
+
+  .author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    &-avatar {
+      width: 3.75rem;
+      height: 3.75rem;
+      border: 3px solid $gray-900;
+      outline: 2px solid $green;
+      box-sizing: initial;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+
+      .name {
+        font-size: 1rem;
+        color: $gray-100;
+        line-height: 1.6;
+      }
+
+      .profession {
+        font-size: .875rem;
+        color: $gray-400;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  .published {
+    font-size: .875rem;
+    color: $gray-400;
+  }
+}
+
+.content {
+  line-height: 1.6;
+  color: $gray-300;
+
+  p {
+    margin: 1rem 0 0;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+
+  a {
+    color: $green;
+    font-weight: bold;
+    margin: 0 .3125rem 0 0;
+  }
+}
