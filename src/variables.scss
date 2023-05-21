@@ -9,10 +9,14 @@ $gray-700: #29292e;
 $gray-800: #202024;
 $gray-900: #121214;
 
-$green: #00875f;
+$green-300: #14ad80;
+$green-500: #00875f;
+
+$red-500: #f75a68;
 
 //Fonts
-$fontGlobal: 'Roboto', sans-serif;
+$fontGlobal: 'Roboto',
+sans-serif;
 
 //Container
 $breakpoint-xs: 0 !default;

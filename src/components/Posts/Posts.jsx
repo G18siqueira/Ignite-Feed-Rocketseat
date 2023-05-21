@@ -1,32 +1,58 @@
 import Post from "./Post";
 import styles from "./posts.module.scss";
 
+const posts = [
+  {
+    id: 1,
+    author: {
+      avatar_url: "https://avatars.githubusercontent.com/u/22178998?v=4",
+      name: "Gustavo Siqueira",
+      role: "Front-end Developer",
+    },
+    publishedAt: new Date("2023-05-20 17:36:00"),
+    content: [
+      { type: "paragraph", content: "Fala galeraa 👋" },
+      {
+        type: "paragraph",
+        content:
+          "Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀",
+      },
+      { type: "link", content: "👉 devonlane.design" },
+    ],
+  },
+  {
+    id: 2,
+    author: {
+      avatar_url: "https://avatars.githubusercontent.com/u/63889819?v=4",
+      name: "Naomi Matsura",
+      role: "Farmacêutica",
+    },
+    publishedAt: new Date("2023-05-21 17:36:00"),
+    content: [
+      { type: "paragraph", content: "Fala galeraa 👋" },
+      {
+        type: "paragraph",
+        content:
+          "Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀",
+      },
+      { type: "link", content: "" },
+    ],
+  },
+];
+
 const Posts = () => {
   return (
     <section className={styles["posts"]}>
-      <Post
-        author={"Gustavo Siqueira"}
-        profession={"Front-end Developer"}
-        content={
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic magnam delectus repellat laudantium consequatur voluptates enim repudiandae quia quibusdam, eum repellendus, deleniti aliquam. Consectetur saepe maxime eos nam possimus repellendus."
-        }
-      />
-
-      <Post
-        author={"Naomi Matsura"}
-        profession={"Front-end Developer"}
-        content={
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam quisquam quas deleniti labore harum rerum!"
-        }
-      />
-
-      <Post
-        author={"Sonia M Domingos"}
-        profession={"Front-end Developer"}
-        content={
-          "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum dolore numquam incidunt? Perspiciatis, facilis et modi natus asperiores consequatur nulla culpa incidunt, reprehenderit voluptatem blanditiis ex! Tenetur mollitia facere molestias magnam corporis, a eum laudantium aspernatur, facilis porro, architecto ad."
-        }
-      />
+      {posts.map(({ id, author, publishedAt, content }) => {
+        return (
+          <Post
+            key={id}
+            author={author}
+            publishedAt={publishedAt}
+            content={content}
+          />
+        );
+      })}
     </section>
   );
 };

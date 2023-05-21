@@ -18,23 +18,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 0 1.5rem;
-
-    .avatar {
-      width: 3.75rem;
-      height: 3.75rem;
-      border: 3px solid $gray-900;
-      outline: 2px solid $green;
-      box-sizing: initial;
-      border-radius: 8px;
-      margin: -2.0625rem 0 1rem;
-      overflow: hidden;
-    }
+    margin: -2.0625rem 0 1.5rem;
 
     h2 {
       color: $gray-100;
       font-size: 1rem;
       line-height: 1.6;
+      margin: 1rem 0 0;
     }
 
     p {
@@ -57,14 +47,14 @@
       width: 100%;
       height: 3.125rem;
       background-color: transparent;
-      color: $green;
-      border: .0625rem solid $green;
+      color: $green-500;
+      border: .0625rem solid $green-500;
       border-radius: .5rem;
       font-weight: bold;
       transition: all .1s ease-in-out;
 
       &:hover {
-        background-color: $green;
+        background-color: $green-300;
         color: $gray-100;
       }
     }

@@ -1,18 +1,17 @@
 import { BsPencil } from "react-icons/bs";
 
 import styles from "./sideBar.module.scss";
+import Avatar from "../Avatar/Avatar";
 
 const Sidebar = () => {
   return (
     <aside className={styles["sidebar"]}>
       <header className={styles["sidebar-cover"]}></header>
       <div className={styles["sidebar-perfil"]}>
-        <div className={styles["avatar"]}>
-          <img
-            src="https://avatars.githubusercontent.com/u/22178998?v=4"
-            alt=""
-          />
-        </div>
+        <Avatar
+          src={"https://avatars.githubusercontent.com/u/22178998?v=4"}
+          hasborder
+        />
         <h2 className={styles["name"]}>Gustavo Siqueira</h2>
         <p className={styles["profission"]}>Front-end Developer</p>
       </div>
